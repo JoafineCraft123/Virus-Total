@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Virus Total - Escaneamento Inteligente</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1.5s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1, h2, p, .download-btn, .faq-item {
+      opacity: 0;
+      animation: fadeInItems 1.5s ease forwards;
+    }
+    h1 {
+      font-size: 3em;
+      margin-top: 60px;
+      text-shadow: 2px 2px 4px #00000050;
+      animation-delay: 0.6s;
+    }
+    h2 {
+      font-size: 1.5em;
+      color: #00c3ff;
+      margin: 20px 0;
+      animation-delay: 1s;
+    }
+    p {
+      font-size: 1.2em;
+      max-width: 800px;
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      padding: 0 20px;
+      animation-delay: 1.4s;
+    }
+    .download-btn {
+      background: linear-gradient(to right, #00c3ff, #007bff);
+      border: none;
+      color: white;
+      padding: 15px 35px;
+      font-size: 1.1em;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 40px;
+      animation-delay: 1.8s;
+    }
+    .download-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 30px rgba(0, 195, 255, 0.4);
+    }
+    .faq {
+      width: 90%;
+      max-width: 800px;
+      margin: 20px auto 60px auto;
+    }
+    .faq-item {
+      background-color: rgba(255, 255, 255, 0.05);
+      margin-bottom: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      animation-delay: 2.2s;
+    }
+    .faq-question {
+      padding: 15px 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 20px;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      padding: 15px 20px;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      opacity: 0.6;
+    }
+    @keyframes fadeInItems {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🛡️ Virus Total</h1>
+  <h2>Seu escudo inteligente contra ameaças digitais</h2>
+  <p>
+    O <strong>Virus Total</strong> é um aplicativo que você instala no seu computador para escanear arquivos, links e mensagens suspeitas.<br>
+  </p>
+
+  <a class="download-btn" href="file:///C:/Users/joaqu/Desktop/Virus%20Total/Virus%20Total.exe" download="Virus Total.exe">
+    ⬇️ Baixar Virus Total
+  </a>
+
+  <section class="faq">
+    <h2>Perguntas Frequentes</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">📄 Quais arquivos posso escanear com o app?</div>
+      <div class="faq-answer">
+        Você pode escanear arquivos .exe, .txt, .pdf, .doc e .docx diretamente pelo aplicativo.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">🌐 Preciso estar conectado à internet?</div>
+      <div class="faq-answer">
+        Sim. O aplicativo usa uma base de dados online para detectar ameaças. Sem internet, ele não funciona.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">🔍 O escaneamento é feito automaticamente?</div>
+      <div class="faq-answer">
+        Não. O usuário precisa escolher manualmente o que quer escanear: arquivos, links ou textos.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">💬 Posso verificar mensagens ou textos?</div>
+      <div class="faq-answer">
+        Sim! Basta colar o texto dentro do app, que ele fará a análise para detectar possíveis ameaças escondidas.
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">© 2025 Virus Total - Proteção na palma da sua mão</div>
+
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      item.querySelector('.faq-question').addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
